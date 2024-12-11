@@ -1,90 +1,46 @@
-.red-font {
-  color: red;
-  transition: color 0.3s ease;
+/* Общий стиль */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.font-size-class {
-  font-size: 20px;
-  transition: font-size 0.3s ease;
+/* Шапка */
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
 }
 
-.red-font:hover {
-  color: green;
+/* Основной контент */
+main {
+  padding: 20px;
+  line-height: 1.6;
 }
 
-.font-size-class:hover {
-  font-size: 15px;
+/* Заголовки */
+h1 {
+  color: #4caf50;
 }
 
-.content-xc {
-  content: "www.secretprankonlyfans/w4R2ssdalkqpasvmxkz.com";
-
+h2 {
+  color: #333;
+  margin-top: 20px;
 }
 
-.content-xc::after {
-  content: "www.secretprankonlyfans/w4R2ssdalkqpasvmxk.com";
-  text-decoration: underline blue;
-  color: blue;
+/* Абзацы */
+p {
+  margin-bottom: 15px;
 }
 
-.boxed-bro {
-  background-color: blueviolet;
-  color: pink;
-  height: 0px;
-  transition: all 2s ease;
-
-}
-
-.boxed-bro:hover {
-  background-color: cadetblue;
-  height: 0px;
-}
-
-.cccc {
-  transform: rotate(0deg);
-  width: 30px;
-  height: 50px;
-  margin-left: 100px;
-  border: 2px solid blue;
-  animation: mover 1s infinite;
-
-}
-
-@keyframes mover {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.container {
-  background-color: blueviolet;
-  border: 1px solid black;
-  padding: 5px;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  flex-wrap: wrap-reverse;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.item {
-  border: 1px solid black;
-  width: 200px;
-  height: 100px;
-  background-color: green;
-}
-.xxxxxx{
-  width: 500px;
-  border:7px solid black;
-  border-style: double;
-  box-shadow: -20px -1px 51px 43px rgba(255,0,0,0.85);
--webkit-box-shadow: -20px -1px 51px 43px rgba(255,0,0,0.85);
--moz-box-shadow: -20px -1px 51px 43px rgba(255,0,0,0.85);
+/* Подвал */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }
