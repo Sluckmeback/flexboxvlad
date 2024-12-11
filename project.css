@@ -1,46 +1,221 @@
-/* Общий стиль */
+/* Основные стили для всего документа */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle, rgba(240, 247, 246, 1) 0%, rgba(255, 255, 255, 1) 100%);
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.8;
+  background-attachment: fixed;
 }
 
-/* Шапка */
+/* Стили для шапки */
 header {
-  background-color: #4caf50;
+  background: linear-gradient(135deg, #3b8dbd, #45a9d4);
   color: white;
-  padding: 15px 20px;
+  padding: 50px 0;
   text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border-bottom: 5px solid #1c5f79;
+  animation: fadeInHeader 2s ease-out;
+  position: relative;
 }
 
-/* Основной контент */
+/* Добавляем анимацию для заголовка в шапке */
+header h1 {
+  font-size: 4rem;
+  margin: 0;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  animation: slideInHeader 1.5s ease-out, glow 1.5s ease-out infinite alternate;
+}
+
+/* Стили для основного контента */
 main {
-  padding: 20px;
-  line-height: 1.6;
+  padding: 50px 30px;
+  max-width: 1100px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Заголовки */
-h1 {
-  color: #4caf50;
+/* Подсветка основного контента при прокрутке */
+main:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
+/* Стили для заголовков секций */
 h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
   color: #333;
-  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #45a9d4;
+  position: relative;
+  animation: slideIn 2s ease-out;
 }
 
-/* Абзацы */
+/* Добавим подчеркивание с эффектом */
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #45a9d4;
+  animation: underline 1s forwards;
+}
+
+@keyframes underline {
+  to {
+      width: 100%;
+  }
+}
+
+/* Стили для параграфов */
 p {
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  text-align: justify;
+  transition: all 0.3s ease;
+  border-left: 4px solid #45a9d4;
+  padding-left: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Подвал */
+/* Эффекты при наведении на параграфы */
+p:hover {
+  transform: scale(1.05);
+  color: #3b8dbd;
+  background-color: #e0f7ff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для подвала */
 footer {
-  background-color: #333;
+  background: linear-gradient(135deg, #3b8dbd, #45a9d4);
   color: white;
   text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
+  padding: 30px 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInFooter 2s ease-out;
+}
+
+/* Анимация для плавного появления шапки */
+@keyframes fadeInHeader {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Анимация для сдвига заголовков секций */
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Анимация для появления подвала */
+@keyframes fadeInFooter {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Стили для плавных переходов */
+h1, h2, p, footer {
+  transition: all 0.3s ease;
+}
+
+/* Эффект увеличения шрифта на заголовках */
+h2:hover, h1:hover {
+  transform: scale(1.1);
+  color: #1c5f79;
+}
+
+/* Добавление анимации для всего контента */
+main, section, footer {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффекты для ссылок */
+a {
+  color: #3b8dbd;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: #1c5f79;
+  text-decoration: underline;
+  transform: scale(1.1);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для блоков секций */
+section {
+  margin-bottom: 50px;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  border-left: 6px solid #3b8dbd;
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2.5rem;
+  }
+
+  h2 {
+      font-size: 2.2rem;
+  }
+
+  p {
+      font-size: 1.1rem;
+  }
+
+  main {
+      padding: 20px;
+  }
+
+  section {
+      padding: 25px;
+  }
 }
