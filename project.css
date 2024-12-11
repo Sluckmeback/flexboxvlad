@@ -80,3 +80,11 @@
   height: 100px;
   background-color: green;
 }
+.xxxxxx{
+  width: 500px;
+  border:7px solid black;
+  border-style: double;
+  box-shadow: -20px -1px 51px 43px rgba(255,0,0,0.85);
+-webkit-box-shadow: -20px -1px 51px 43px rgba(255,0,0,0.85);
+-moz-box-shadow: -20px -1px 51px 43px rgba(255,0,0,0.85);
+}
